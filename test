@@ -1,6 +1,7 @@
 #include <deque>
 #include <iostream>
 #include <vector>
+#include <memory>
 using namespace std;
 
 class Ctest{
@@ -15,13 +16,14 @@ class Ctest{
 };
 Ctest c1(10,20,30);
 Ctest c2(10,20,30);
-Ctest c3(10,20,30);
+Ctest c3(99,88,77);
 
 
 
 int main(){
     vector<Ctest> vCtest{c1,c2,c3};
-    vector<Ctest>::iterator it=vCtest.begin();
-    cout<<(*it).a;
+    shared_ptr<vector<Ctest> >ptr;
+    vector<Ctest>::iterator it=vCtest.end()-1;
+    
 }
 //deque<shared_ptr<Ctest>> dq;
