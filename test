@@ -1,0 +1,27 @@
+#include <deque>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class Ctest{
+    public:
+            int a;
+            int b;
+            int c;
+            Ctest(int a, int b, int c ){(*this).a=a;(*this).b=b;(*this).c=c;}
+    
+    
+    
+};
+Ctest c1(10,20,30);
+Ctest c2(10,20,30);
+Ctest c3(10,20,30);
+
+
+
+int main(){
+    vector<Ctest> vCtest{c1,c2,c3};
+    vector<Ctest>::iterator it=vCtest.begin();
+    cout<<(*it).a;
+}
+//deque<shared_ptr<Ctest>> dq;
